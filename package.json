@@ -1,0 +1,27 @@
+{
+  "name": "daily-tasks-data",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Antoine Caron <antoine.caron@ext.adeo.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.2.3",
+    "@types/lodash": "^4.14.190",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "babel-jest": "^29.3.1",
+    "eslint": "^8.28.0",
+    "jest": "^29.3.1",
+    "sqlite3": "^5.1.2",
+    "ts-jest": "^29.0.3",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "sequelize": "^6.26.0"
+  }
+}

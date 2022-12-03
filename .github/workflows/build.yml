@@ -3,6 +3,7 @@ name: Build And Test
 on:
   push:
     paths:
+      - '.github/workflows/build.yml'
       - 'sources/**'
       - 'tests/**'
 

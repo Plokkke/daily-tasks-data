@@ -1,0 +1,24 @@
+name: Publish
+
+on: workflow_dispatch
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - uses: martinbeentjes/npm-get-version-action@main
+        id: package-version
+      - uses: rickstaa/action-create-tag@v1
+        with:
+          tag: v${{ steps.package-version.outputs.version }}
+          commit_sha: $GITHUB_SHA
+      - run: npm ci
+      - run: npm run build
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+

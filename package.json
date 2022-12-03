@@ -1,14 +1,16 @@
 {
   "name": "daily-tasks-data",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "jest"
+    "build": "tsc -p tsconfig.json",
+    "test": "jest ./tests/"
   },
   "author": "Antoine Caron <antoine.caron@ext.adeo.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
     "@types/jest": "^29.2.3",
     "@types/lodash": "^4.14.190",
     "@typescript-eslint/eslint-plugin": "^5.45.0",

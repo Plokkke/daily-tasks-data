@@ -1,2 +1,9 @@
+.vscode/
+.idea/
+build/
+coverage/
+docs/
 node_modules/
+reports/
 
+.DS_Store
